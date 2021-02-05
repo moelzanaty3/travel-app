@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "0cc08338-f378-475c-8d0c-9d72388f019b",
+		"name": "Udacity-Travel-App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get GeoLocation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/geo-location?city=cairo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"geo-location"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "cairo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Weather Forecase",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/weather-forecast?latitude=51.50853&longitude=-0.12574&key=b358004d22154dc0b6c089759f975989",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"weather-forecast"
+					],
+					"query": [
+						{
+							"key": "latitude",
+							"value": "51.50853"
+						},
+						{
+							"key": "longitude",
+							"value": "-0.12574"
+						},
+						{
+							"key": "key",
+							"value": "b358004d22154dc0b6c089759f975989"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Country Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/country-code/?countryCode=EG",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"country-code",
+						""
+					],
+					"query": [
+						{
+							"key": "countryCode",
+							"value": "EG"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Image",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/country-image?city=cairo&country=Egypt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"country-image"
+					],
+					"query": [
+						{
+							"key": "city",
+							"value": "cairo"
+						},
+						{
+							"key": "country",
+							"value": "Egypt"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save Trip",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"city\": \"\",\n    \"start\": \"\",\n    \"end\": \"\",\n    \"latitude\": \"\",\n    \"longitude\": \"\",\n    \"countryCode\": \"\",\n    \"weatherForecast\": \"\",\n    \"country\": \"\",\n    \"countryFlag\": \"\",\n    \"image\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/api/trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"trip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Trips",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/api/trip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"api",
+						"trip"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
