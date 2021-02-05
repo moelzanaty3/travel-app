@@ -8,6 +8,8 @@ let createError = require('http-errors')
 
 const geoLocationRouter = require('./resources/geo-location/geo-location.router')
 const weatherForecastRouter = require('./resources/weather/weather.router')
+const countryCodeRouter = require('./resources/country-code/country-code.router')
+const countryImageRouter = require('./resources/country-image/country-image.router')
 
 dotenv.config()
 
@@ -22,6 +24,8 @@ app.use(express.static('dist'))
 
 app.use('/api/geo-location', geoLocationRouter)
 app.use('/api/weather-forecast', weatherForecastRouter)
+app.use('/api/country-code', countryCodeRouter)
+app.use('/api/country-image', countryImageRouter)
 
 /*app.get('/', (req, res) => {
   res.sendFile('dist/index.html')
