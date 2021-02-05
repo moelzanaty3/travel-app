@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebPackPlugin = require('html-webpack-plugin')
-const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 const WorkboxPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
@@ -25,6 +25,20 @@ module.exports = {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.html$/,
+        use: ["html-loader"]
+      },
+      {
+        test: /\.(svg|png|jpg|gif)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[name].[hash].[ext]",
+            outputPath: "images"
+          }
+        }
+      }
     ],
   },
   plugins: [
@@ -32,12 +46,7 @@ module.exports = {
       template: './src/client/views/index.html',
       filename: './index.html',
     }),
-    new CleanWebpackPlugin({
-      dry: true,
-      verbose: true,
-      cleanStaleWebpackAssets: true,
-      protectWebpackAssets: false,
-    }),
     new WorkboxPlugin.GenerateSW(),
+    new CleanWebpackPlugin()
   ]
 }

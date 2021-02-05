@@ -28,10 +28,10 @@ app.use('/api/country-code', countryCodeRouter)
 app.use('/api/country-image', countryImageRouter)
 app.use('/api/trip', tripRouter)
 
-/*app.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile('dist/index.html')
   // res.sendFile(path.resolve('src/client/views/index.html'))
-})*/
+})
 
 // designates what port the app will listen to for incoming requests
 app.listen(8081, (error) => {
