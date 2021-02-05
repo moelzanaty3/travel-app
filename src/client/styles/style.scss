@@ -58,3 +58,15 @@
 .modal-backdrop.show {
   display: none !important;
 }
+
+.error {
+  background: linear-gradient(to right, red, #e74c3c);
+}
+
+.success {
+  background: linear-gradient(to right, green, #07bc0c);
+}
+
+.info {
+  background: linear-gradient(to right, #00b09b, #96c93d);
+}

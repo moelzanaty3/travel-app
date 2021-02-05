@@ -1,17 +1,46 @@
-form {
-    border: 1px solid #545454;
-    border-radius: 3px;
-    padding: 40px;
-}
 
-input {
-    padding: 5px 20px;
-    width: 100%;
-    line-height: 16px;
-    margin: 10px 0;
-}
+.booking-form {
+  -webkit-box-shadow: 0 5px 20px -5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 20px -5px rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
 
-.btn {
+  form {
+    padding: 2rem;
+  }
+
+  .form-group {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  .form-control {
+    background-color: #ebecee;
+    border-radius: 4px;
+    border: none;
+    height: 40px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: #3e485c;
+    font-size: 14px;
+
+    &::-webkit-input-placeholder, &:-ms-input-placeholder, &::placeholder {
+      color: rgba(62, 72, 92, 0.3);
+    }
+  }
+
+  input[type=date].form-control:invalid {
+    color: rgba(62, 72, 92, 0.3);
+  }
+
+  .form-label {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 6px;
+    margin-left: 7px;
+  }
+
+  .submit-btn {
     position: relative;
     padding: 0.5rem 1rem;
     border-radius: 30px;
@@ -19,47 +48,53 @@ input {
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
-    border: 3px solid #000;
+    border: 3px solid #fff;
     outline: none;
-    color: #000;
+    color: #fff;
     display: block;
     cursor: pointer;
     overflow: hidden;
     background: transparent;
     transition: 0.3s;
     margin: 0.5rem 0;
+
     &::before {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #f8c803;
-        opacity: 0.5;
-        bottom: -100%;
-        left: 0;
-        z-index: -1;
-        transition: 0.3s;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #3498db;
+      opacity: 0.5;
+      bottom: -100%;
+      left: 0;
+      z-index: -1;
+      transition: 0.3s;
     }
+
     &::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: #f8c803;
-        top: -100%;
-        left: 0;
-        z-index: -1;
-        transition: 0.3s;
-        transition-delay: .1s;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #3498db;
+      top: -100%;
+      left: 0;
+      z-index: -1;
+      transition: 0.3s;
+      transition-delay: .1s;
     }
+
     &:hover {
-        color: #fff;
-        border-color: #fff;
-        &::before {
-            bottom: 0;
-        }
-        &::after {
-            top: 0;
-        }
+      color: #fff;
+      border-color: #fff;
+
+      &::before {
+        bottom: 0;
+      }
+
+      &::after {
+        top: 0;
+      }
     }
+  }
 }
