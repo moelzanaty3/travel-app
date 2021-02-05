@@ -7,6 +7,7 @@ let logger = require('morgan')
 let createError = require('http-errors')
 
 const geoLocationRouter = require('./resources/geo-location/geo-location.router')
+const weatherForecastRouter = require('./resources/weather/weather.router')
 
 dotenv.config()
 
@@ -20,6 +21,7 @@ app.use(bodyParser.json())
 app.use(express.static('dist'))
 
 app.use('/api/geo-location', geoLocationRouter)
+app.use('/api/weather-forecast', weatherForecastRouter)
 
 /*app.get('/', (req, res) => {
   res.sendFile('dist/index.html')
