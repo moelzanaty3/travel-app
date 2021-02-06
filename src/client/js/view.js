@@ -1,15 +1,22 @@
 import { diffDays } from '../utils/utils'
 
+/**
+ *
+ * @param trips contain all the trips that user want to travel
+ */
 const populateAllTrips = (trips) => {
+  // Container that will contains all the trips
   const tripsContainer = document.getElementById('trips')
-  // clear old trips from dom
+  // Clear old trips from dom
   tripsContainer.innerHTML = ''
+  // Creates a new empty DocumentFragment into which DOM nodes can
+  // be added to build an offscreen DOM tree.
   const fragment = document.createDocumentFragment()
-
+  // handle if there's no trips
   if (trips.length === 0) {
     tripsContainer.innerHTML = '<h4 class="no-trips">No Trips available, search and save yours</h4>'
   }
-
+  // Iterate for all the trips retrieved from the backend and populate it to the view
   trips.forEach((trip) => {
     const tripEl = document.createElement('div')
     tripEl.classList.add('card')
@@ -61,13 +68,25 @@ const populateAllTrips = (trips) => {
         </div>
       </div>
     `
-
+    // append trip to virtual DOM element
     fragment.appendChild(tripEl)
   })
+  // append trips to trips-container
   tripsContainer.appendChild(fragment)
   $('.collapse').slice(1).collapse()
 }
 
+/**
+ * Modal Confirmation for the user to save the trip if it suitable for him/her
+ * @param city
+ * @param start
+ * @param end
+ * @param countryCode
+ * @param country
+ * @param countryFlag
+ * @param weatherForecast
+ * @param imageURL
+ */
 const showModal = ({
   city,
   start,
@@ -92,7 +111,7 @@ const showModal = ({
 
   document.querySelector('.card-info__forecast').textContent = `${weatherForecast}`
   document.querySelector('.card-info__code').textContent = `${countryCode}`
-
+  // trigger modal
   $('#trip-overview-modal').modal({
     keyboard: false,
   })

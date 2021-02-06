@@ -1,7 +1,13 @@
-import { handleError, NOTIFICATION_SETTING } from "../utils/utils";
+import { handleError, NOTIFICATION_SETTING } from '../utils/utils'
 
 const BASE_URL = 'http://localhost:8081'
 
+/**
+ *
+ * @param url path for the targeted endpoint
+ * @param data payload that contain all the information about targeted trip
+ * @returns {Promise<void>}
+ */
 async function saveData(url, data) {
   try {
     const response = await fetch(`${BASE_URL}/${url}`, {
@@ -10,12 +16,12 @@ async function saveData(url, data) {
       cache: 'no-cache',
       credentials: 'same-origin',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
       redirect: 'follow',
       referrerPolicy: 'no-referrer',
-      body: JSON.stringify(data)
-    });
+      body: JSON.stringify(data),
+    })
     const json = await response.json()
     if (response.status === 200) {
       const { message } = json
@@ -33,6 +39,11 @@ async function saveData(url, data) {
   }
 }
 
+/**
+ * function that handle all the requests from the client side
+ * @param url path for the targeted endpoint
+ * @returns {Promise<*>}
+ */
 async function fetchData(url) {
   try {
     const response = await fetch(`${BASE_URL}/${url}`)
@@ -46,6 +57,7 @@ async function fetchData(url) {
       }).showToast()
       return data
     } else {
+      // handle request error
       const { message } = json
       handleError(message)
     }

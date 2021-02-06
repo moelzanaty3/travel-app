@@ -4,6 +4,9 @@ import { populateAllTrips, showModal } from './js/view'
 
 let trip = null
 
+/**
+ * Event Listener to handle the Content Loaded
+ */
 document.addEventListener('DOMContentLoaded', async () => {
   // get all trips
   const trips = await getAllTrips()
@@ -13,6 +16,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const buttonSubmit = document.querySelector('.submit-btn')
   buttonSubmit.addEventListener('click', async (event) => {
     event.preventDefault()
+    // get all available trips
     trip = await getTripDetails()
     if (trip) {
       showModal(trip)
@@ -23,6 +27,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   const buttonSaveTrip = document.getElementById('save-trip')
   buttonSaveTrip.addEventListener('click', async (event) => {
     event.preventDefault()
+    // save trip
     await saveTrip(trip)
     $('#trip-overview-modal').modal('hide')
     // get all trips
@@ -34,6 +39,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   document.querySelectorAll('#trips').forEach(function (el) {
     // bind click event to each el
     el.addEventListener('click', function (e) {
+      // collapse target trip
       $(e.target.dataset.target).collapse('toggle')
     })
   })

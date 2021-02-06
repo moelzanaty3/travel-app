@@ -16,10 +16,12 @@ dotenv.config()
 const app = express()
 
 app.use(logger('dev'))
+// Cors for cross origin allowance
 app.use(cors())
+// Configuring express to use body-parser as middle-ware.
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+// Configuring express static directory
 app.use(express.static('dist'))
 
 app.use('/api/geo-location', geoLocationRouter)
@@ -53,3 +55,7 @@ app.use((err, req, res, next) => {
   res.status(err.status || 500)
   res.sendFile('dist/error.html')
 })
+
+module.exports = {
+  app,
+}
