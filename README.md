@@ -18,7 +18,7 @@ This project aims to give you the opportunity to put all of the skills you have 
 ## API(s)
 
 * [Geonames API](http://www.geonames.org/export/web-services.html) - Geographical database from which the location data is pulled
-* [DarkSky API](https://darksky.net/dev) - Weather API for current and future weather data
+* [Weahterbit API](weatherbit.io) - Weather API for current and future weather data
 * [Pixabay API](https://pixabay.com/api/docs/) - RESTful interface for searching and retrieving free images and videos
 
 ## Development strategy
