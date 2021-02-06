@@ -1,10 +1,12 @@
 
 .accordion-item {
   .accordion-header {
-    background: white;
     padding: 0.5rem 0;
     cursor: pointer;
     border-radius: 2%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 
     .accordion-button {
       background: transparent;
@@ -13,7 +15,7 @@
       width: 100%;
       text-align: left;
       font-weight: bold;
-      color: #3498db;
+      color: white;
     }
 
     .accordion-img {
@@ -22,8 +24,6 @@
   }
 
   .accordion-body {
-    color: white;
-
     .card-body {
       padding: 0.5rem;
       background-repeat: no-repeat;
@@ -34,13 +34,13 @@
         margin: 10px 0;
 
         h6 {
-          color: white;
+          color: #3498db;
           margin-right: 10px;
           margin-bottom: 0;
         }
 
         p {
-          color: #ecf0f1;
+          color: #a0a0a2;
           margin-bottom: 0;
         }
       }
@@ -48,7 +48,7 @@
   }
 
   .arrow {
-    border: solid black;
+    border: solid white;
     border-width: 0 3px 3px 0;
     padding: 3px;
     text-align: right;
@@ -63,4 +63,22 @@
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
   }
+}
+
+.modal {
+  .card-info {
+    h6 {
+      color: #3498db;
+    }
+  }
+}
+
+.no-trips {
+  color: white;
+  font-weight: bold;
+}
+
+#trips {
+  max-height: 420px;
+  overflow: auto;
 }

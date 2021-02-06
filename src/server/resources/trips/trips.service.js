@@ -6,12 +6,8 @@ const tripsFilePath = path.join(__dirname, '../../trips.json')
 
 async function getAllTrips() {
   try {
-    let trips = []
-    await fs.readFile(tripsFilePath, (err, data) => {
-      if (err) throw err
-      trips = JSON.parse(data)
-    })
-    return trips
+    const buffer = await fs.readFileSync(tripsFilePath)
+    return JSON.parse(buffer)
   } catch (error) {
     throw new Error(error)
   }

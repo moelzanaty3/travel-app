@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": "ac884e7b-f3db-418d-b83b-c2672b44848a",
+    "city": "Egypt",
+    "start": "2021-02-10",
+    "end": "2021-02-19",
+    "longitude": "30",
+    "latitude": "27",
+    "countryCode": "EG",
+    "country": "Egypt",
+    "countryFlag": "https://restcountries.eu/data/egy.svg",
+    "weatherForecast": "Clear sky",
+    "imageURL": "https://pixabay.com/get/gcca63ba41f1fc5842d654f25a2c48349c5977945f491ba9fbfeba60f768efc77765550e66fc96fd9b4860bf29cbc9bcbae845291efb47e3915e56775e2d7bf82_1280.jpg"
+  },
+  {
+    "id": "59429a3a-71f7-4691-9d62-f92fb683b9d3",
+    "city": "London",
+    "start": "2021-02-10",
+    "end": "2021-02-24",
+    "longitude": "-0.12574",
+    "latitude": "51.50853",
+    "countryCode": "GB",
+    "country": "United Kingdom of Great Britain and Northern Ireland",
+    "countryFlag": "https://restcountries.eu/data/gbr.svg",
+    "weatherForecast": "Overcast clouds",
+    "imageURL": "https://pixabay.com/get/gbbebcf4666c86be256a1bc9d9a5dd8fb4b83b5eae2da89109fef13ea7b63b1a2cc58b58a35b021d31e0914355d091004dd6292c0768b55c8d0e0d97d78cb1222_1280.jpg"
+  }
+]

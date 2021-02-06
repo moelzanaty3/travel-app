@@ -49,42 +49,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-md-7">
-          <div class="accordion" id="trips">
-            <div class="card accordion-item">
-              <div class="card-header accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-toggle="collapse"
-                        data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  <img class="accordion-img" src="https://restcountries.eu/data/egy.svg" alt="falg"> Accordion Item #1
-                  <i class="arrow down"></i>
-                </button>
-              </div>
-              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#trips">
-                <div class="accordion-body">
-                  <div class="card">
-                    <div class="card-body"
-                         style="background-image: url(https://pixabay.com/get/g76783f9dfc6ee67b3fb61e088fbe05e0e1ea324abf4f250c40a1eb9b4aa95f39e19518def0e09de70c6075f8c00d1fe2e92fb67ae3d688c735db93710d93e73e_1280.jpg)">
-                      <div class="card-info">
-                        <h6><strong>Check In</strong></h6>
-                        <p>10.1.2021</p>
-                      </div>
-                      <div class="card-info">
-                        <h6><strong>Check Out</strong></h6>
-                        <p>10.1.2021</p>
-                      </div>
-                      <div class="card-info">
-                        <h6><strong>Duration</strong></h6>
-                        <p>5 Days</p>
-                      </div>
-                      <div class="card-info">
-                        <h6><strong>Weather Forecast</strong></h6>
-                        <p>Few clouds</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="accordion" id="trips"></div>
         </div>
       </div>
     </div>
@@ -97,39 +62,48 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">City</h5>
+        <div class="modal-title">
+          <img class="modal-title__flag" width="40px" src="https://restcountries.eu/data/egy.svg" alt="falg">
+          <h5 class="modal-title__text">City</h5>
+        </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <img width="100%"
+        <img width="100%" height="300px"
              src="https://pixabay.com/get/g76783f9dfc6ee67b3fb61e088fbe05e0e1ea324abf4f250c40a1eb9b4aa95f39e19518def0e09de70c6075f8c00d1fe2e92fb67ae3d688c735db93710d93e73e_1280.jpg"
-             class="mr-3 mb-4" alt="...">
+             class="mr-3 mb-4 modal-body__image" alt="">
         <div class="row">
           <div class="col-xs-12 col-md-6">
             <div class="card-info">
               <h6><strong>Check In</strong></h6>
-              <p>10.1.2021</p>
+              <p class="card-info__check-in">10.1.2021</p>
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="card-info">
               <h6><strong>Check Out</strong></h6>
-              <p>10.1.2021</p>
+              <p class="card-info__check-out">10.1.2021</p>
             </div>
 
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="card-info">
               <h6><strong>Duration</strong></h6>
-              <p>5 Days</p>
+              <p class="card-info__duration">5 Days</p>
             </div>
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="card-info">
               <h6><strong>Weather Forecast</strong></h6>
-              <p>Few clouds</p>
+              <p class="card-info__forecast">Few clouds</p>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="card-info">
+              <h6><strong>Country Code</strong></h6>
+              <p class="card-info__code">Few clouds</p>
             </div>
           </div>
         </div>
